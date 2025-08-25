@@ -119,4 +119,98 @@ body {
     transition: transform 0.3s;
 }
 
-.project-links img:hover, .project-links svg:h
+.project-links img:hover, .project-links svg:hover {
+    transform: scale(1.1);
+}
+
+.work-desc {
+    padding: 0 1rem 1rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Footer */
+.bottom-container {
+    background: #0f94a5;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+}
+
+.bottom-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info img {
+    width: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social a img {
+    width: 30px;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.social a img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive Breakpoints */
+
+/* Tablet: 2 columns */
+@media (max-width: 992px) {
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .top-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-me {
+        max-width: 90%;
+    }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 600px) {
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-pic {
+        width: 200px;
+    }
+
+    .name {
+        position: static;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .bottom-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social a img {
+        margin: 0 10px;
+    }
+}
